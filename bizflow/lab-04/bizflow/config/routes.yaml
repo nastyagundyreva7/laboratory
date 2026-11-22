@@ -1,0 +1,9 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+# Дополнительный маршрут из YAML-конфигурации.
+legal_notice:
+    path: /legal
+    controller: App\Controller\PageController::legal
+    methods: [GET]

@@ -1,0 +1,5 @@
+{{ form_start(form) }}
+{% if not form.vars.valid %}<div class="form-errors" role="alert">{{ form_errors(form) }}Проверьте заполнение полей.</div>{% endif %}
+{% for field in [form.name, form.email, form.phone, form.company, form.comment] %}<div class="form-row">{{ form_label(field) }}{{ form_widget(field) }}{{ form_errors(field) }}</div>{% endfor %}
+<div class="actions">{{ form_widget(form.save) }}<a href="{{ path('customer_index') }}">Отмена</a></div>
+{{ form_end(form) }}
