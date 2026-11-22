@@ -22,7 +22,7 @@
     "doctrine/doctrine-migrations-bundle": "^3.4",
     "doctrine/doctrine-fixtures-bundle": "^4.0",
     "doctrine/dbal": "^4.2",
-    "twig": "^3.0"
+    "twig/twig": "^3.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^11.5",

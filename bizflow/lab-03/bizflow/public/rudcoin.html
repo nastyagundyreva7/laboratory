@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RUD COIN — Личный кабинет</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f3f5fa;color:#17264a;font-family:Arial,sans-serif}
+header{background:#102650;color:white;padding:22px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:25px;font-weight:bold;letter-spacing:1px}
+.logo span{color:#70a9ff}
+header a{color:white;text-decoration:none;margin-left:25px}
+main{max-width:1150px;margin:35px auto;padding:0 20px}
+h1{font-size:32px;margin-bottom:8px}
+.muted{color:#78849b}
+.balance{background:linear-gradient(120deg,#142e60,#2865bb);color:white;border-radius:20px;padding:30px;margin:28px 0;display:flex;justify-content:space-between;align-items:center}
+.balance small{opacity:.8}
+.coins{font-size:43px;font-weight:bold;margin-top:10px}
+.pill{background:#ffffff25;padding:12px 18px;border-radius:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;border-radius:16px;padding:22px;box-shadow:0 4px 18px #142e6010}
+.card h3{margin-top:0}
+.number{font-size:27px;font-weight:bold;color:#2865bb}
+section{margin:35px 0}
+.event{display:flex;justify-content:space-between;align-items:center;gap:15px;border-bottom:1px solid #edf0f5;padding:17px 0}
+.event:last-child{border:0}
+.tag{background:#eaf1ff;color:#2865bb;padding:7px 11px;border-radius:20px;font-size:13px;white-space:nowrap}
+.reward{color:#21875c;font-weight:bold}
+.activity{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid #edf0f5}
+footer{text-align:center;color:#8792a7;padding:35px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.balance{align-items:flex-start;gap:15px;flex-direction:column}header{flex-wrap:wrap;gap:15px}header a{margin-left:0;margin-right:12px}.event{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">RUD <span>COIN</span></div>
+<nav><a href="#events">Мероприятия</a><a href="#history">История</a><a href="#privileges">Привилегии</a></nav>
+</header>
+<main>
+<p class="muted">Личный кабинет студента</p>
+<h1>Привет, Анастасия!</h1>
+<p class="muted">Твои достижения и возможности в РУДН</p>
+<div class="balance">
+<div><small>ТВОЙ БАЛАНС</small><div class="coins">1 250 RDC</div><p>Продолжай участвовать в жизни университета!</p></div>
+<div class="pill">Уровень: Активный участник</div>
+</div>
+<div class="grid">
+<div class="card"><p class="muted">Посещено мероприятий</p><div class="number">12</div></div>
+<div class="card"><p class="muted">Заработано коинов</p><div class="number">1 750</div></div>
+<div class="card"><p class="muted">Доступно привилегий</p><div class="number">8</div></div>
+</div>
+<section id="events">
+<h2>Ближайшие мероприятия</h2>
+<div class="card">
+<div class="event"><div><b>Научная конференция РУДН</b><p class="muted">Наука · 25 ноября</p></div><span class="reward">+150 RDC</span></div>
+<div class="event"><div><b>День карьеры</b><p class="muted">Карьера · 28 ноября</p></div><span class="reward">+100 RDC</span></div>
+<div class="event"><div><b>Студенческий форум</b><p class="muted">Университет · 3 декабря</p></div><span class="reward">+200 RDC</span></div>
+</div>
+</section>
+<section id="history">
+<h2>Последние операции</h2>
+<div class="card">
+<div class="activity"><span>Участие в научном мероприятии</span><b class="reward">+150 RDC</b></div>
+<div class="activity"><span>Посещение университетского форума</span><b class="reward">+100 RDC</b></div>
+<div class="activity"><span>Консультация с наставником</span><b style="color:#bd7650">−200 RDC</b></div>
+</div>
+</section>
+<section id="privileges">
+<h2>Привилегии</h2>
+<div class="grid">
+<div class="card"><h3>Учебные возможности</h3><p class="muted">Пересдача и консультация с преподавателем</p></div>
+<div class="card"><h3>Встречи</h3><p class="muted">Возможность встречи с руководством университета</p></div>
+<div class="card"><h3>Партнёрские бонусы</h3><p class="muted">Скидки, мерч и специальные предложения</p></div>
+</div>
+</section>
+</main>
+<footer>RUD COIN · Цифровая программа поощрения студентов РУДН</footer>
+</body>
+</html>
