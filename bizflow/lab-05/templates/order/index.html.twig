@@ -1,0 +1,4 @@
+{% extends 'base.html.twig' %}
+{% block title %}Заказы · BizFlow{% endblock %}
+{% block body %}<h1>Заказы</h1><form method="get"><label>Статус <select name="status"><option value="">Все</option>{% for s in ['draft','pending','paid','shipped','cancelled'] %}<option value="{{ s }}" {% if status == s %}selected{% endif %}>{{ s }}</option>{% endfor %}</select></label><button>Фильтровать</button></form>
+<table><tr><th>ID</th><th>Клиент</th><th>Статус</th><th>Дата</th></tr>{% for o in orders %}<tr><td>#{{ o.id }}</td><td><a href="{{ path('customer_show',{id:o.customer.id}) }}">{{ o.customer.name }}</a></td><td>{{ o.status }}</td><td>{{ o.createdAt|date('d.m.Y') }}</td></tr>{% else %}<tr><td colspan="4">Нет заказов</td></tr>{% endfor %}</table>{% endblock %}

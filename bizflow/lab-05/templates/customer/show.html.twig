@@ -1,0 +1,5 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ customer.name }} · BizFlow{% endblock %}
+{% block body %}<h1>{{ customer.name }}</h1><p>{{ customer.email }} · {{ customer.company ?? 'Компания не указана' }}</p>
+<h2>Заказы клиента</h2><table><tr><th>ID</th><th>Статус</th><th>Создан</th></tr>{% for order in orders %}<tr><td>#{{ order.id }}</td><td>{{ order.status }}</td><td>{{ order.createdAt|date('d.m.Y H:i') }}</td></tr>{% else %}<tr><td colspan="3">Заказов пока нет</td></tr>{% endfor %}</table>
+<nav class="pagination">{% if page > 1 %}<a href="?page={{ page-1 }}">← Назад</a>{% endif %}<span>Страница {{ page }} из {{ pages }}</span>{% if page < pages %}<a href="?page={{ page+1 }}">Вперёд →</a>{% endif %}</nav>{% endblock %}

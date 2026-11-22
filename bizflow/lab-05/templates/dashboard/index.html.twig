@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block title %}Dashboard · BizFlow{% endblock %}
+{% block body %}
+<h1>Dashboard</h1>
+<section class="stats">
+  <article><small>Клиенты</small><strong>{{ customerCount }}</strong></article>
+  <article><small>Заказы</small><strong>{{ orderCount }}</strong></article>
+  <article><small>Выручка</small><strong>{{ (revenueCents / 100)|number_format(2, '.', ' ') }} ₽</strong></article>
+  <article><small>Средний заказ</small><strong>{{ (averageOrderCents / 100)|number_format(2, '.', ' ') }} ₽</strong></article>
+</section>
+<div class="columns"><section><h2>Топ клиентов</h2><table><tr><th>Клиент</th><th>Выручка</th></tr>{% for c in topCustomers %}<tr><td>{{ c.customerName }}</td><td>{{ (c.revenueCents / 100)|number_format(2,'.',' ') }} ₽</td></tr>{% else %}<tr><td colspan="2">Нет данных</td></tr>{% endfor %}</table></section>
+<section><h2>Топ товаров</h2><table><tr><th>Товар</th><th>Продано</th></tr>{% for p in topProducts %}<tr><td>{{ p.productName }}</td><td>{{ p.unitsSold }}</td></tr>{% else %}<tr><td colspan="2">Нет данных</td></tr>{% endfor %}</table></section></div>
+{% endblock %}
