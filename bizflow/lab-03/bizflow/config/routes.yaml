@@ -1,0 +1,9 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+# Дополнительный маршрут, объявленный через YAML:
+api_version:
+    path: /api/version
+    controller: App\Controller\HealthController::version
+    methods: [GET]

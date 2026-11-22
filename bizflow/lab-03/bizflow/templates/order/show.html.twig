@@ -1,0 +1,1 @@
+{% extends 'base.html.twig' %}{% block title %}Заказ {{ order.id }}{% endblock %}{% block body %}<section class="card"><h1>Заказ №{{ order.id }}</h1><p>Клиент: {{ order.customer }}</p><p>Сумма: {{ order.total }}</p><p>Статус: {{ order.status }}</p><a href="{{ path('order_index') }}">К списку</a></section>{% endblock %}
